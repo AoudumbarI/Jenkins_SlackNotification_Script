@@ -26,7 +26,7 @@
         try {
         stage('Staging') {
             echo 'Deploy Stage'
-            sh './jenkins/scripts/deliver.sh'
+            // sh './jenkins/scripts/deliver.sh'
         }
         lib.staging()
         }catch (err) {
@@ -39,13 +39,13 @@
         stage('Deploy') {
             echo 'Deploy - Backend'
             echo 'Deploy - Frontend'
-            // sh './jenkins/scripts/deliver.sh'
+            sh './jenkins/scripts/deliver.sh'
         }
         lib.deploy()
         
         }catch (err) {
        
-        lib.fail()
+        lib.deployfail()
         
         throw err
         }
