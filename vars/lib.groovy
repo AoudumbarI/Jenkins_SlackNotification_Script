@@ -1,6 +1,6 @@
  def start(){
      slackSend teamDomain: "techverito", channel: "#gocd-build-notifications" , tokenCredentialId: "32065985-0e36-4265-bdd8-8fc1e942f4f4", color: '#439FE0', 
-            message: " <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER} *STARTED* By ${currentBuild.getBuildCauses()[0].userId} "
+            message: "*STARTED* By ${currentBuild.getBuildCauses()[0].userId} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER}"
   }
  def success(){
    slackSend teamDomain: "techverito", channel: "#gocd-build-notifications", tokenCredentialId: "32065985-0e36-4265-bdd8-8fc1e942f4f4", color: '#00FF00', 
