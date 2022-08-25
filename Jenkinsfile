@@ -16,12 +16,26 @@
             // sh './jenkins/scripts/deliver.sh'
         }
         lib.testing()
+        }catch (err) {
+       
+        lib.testingfail()
+        
+        throw err
+        }
+        
+        try {
 
         stage('Staging') {
             echo 'Deploy Stage'
             sh './jenkins/scripts/deliver.sh'
         }
         lib.staging()
+        }catch (err) {
+       
+        lib.stagingfail()
+        
+        throw err
+        }
 
         stage('Deploy') {
             echo 'Deploy - Backend'
