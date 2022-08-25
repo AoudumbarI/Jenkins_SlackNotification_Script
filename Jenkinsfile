@@ -19,7 +19,7 @@
 
         stage('Staging') {
             echo 'Deploy Stage'
-            // sh './jenkins/scripts/deliver.sh'
+            sh './jenkins/scripts/deliver.sh'
         }
         lib.staging()
 
