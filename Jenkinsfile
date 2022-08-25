@@ -22,9 +22,9 @@
             echo 'Deploy - Backend'
             echo 'Deploy - Frontend'
         }
-        stage('sh'){
-            sh './jenkins/scripts/deliver.sh'
-        }
+        // stage('sh'){
+        //     sh './jenkins/scripts/deliver.sh'
+        // }
         
         lib.success()
         }
