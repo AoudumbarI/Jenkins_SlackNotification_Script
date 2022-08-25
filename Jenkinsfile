@@ -28,12 +28,14 @@
             echo 'Deploy - Frontend'
             // sh './jenkins/scripts/deliver.sh'
         }
+        lib.deploy()
         
-        lib.success()
         }catch (err) {
        
         lib.fail()
         
         throw err
         }
+        lib.success()
     } 
+
