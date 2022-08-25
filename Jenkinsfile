@@ -2,7 +2,7 @@
 
 
     node {
-            try {
+        try {
         lib.start()
 
         stage('Prepare code') {
@@ -24,7 +24,6 @@
         }
         
         try {
-
         stage('Staging') {
             echo 'Deploy Stage'
             sh './jenkins/scripts/deliver.sh'
@@ -36,7 +35,7 @@
         
         throw err
         }
-
+        try {
         stage('Deploy') {
             echo 'Deploy - Backend'
             echo 'Deploy - Frontend'
