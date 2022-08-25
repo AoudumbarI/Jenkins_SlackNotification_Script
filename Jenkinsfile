@@ -27,12 +27,10 @@
         // }
         
         lib.success()
-        }
-    }
-
-   catch (err) {
+        }catch (err) {
        
-     lib.fail()
+        lib.fail()
         
-    throw err
-  } 
+        throw err
+        }
+    } 
