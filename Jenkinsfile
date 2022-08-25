@@ -1,8 +1,8 @@
 @Library('sclak_library') _
 
-    try {
-        node {
-            
+
+    node {
+            try {
         lib.start()
 
         stage('Prepare code') {
