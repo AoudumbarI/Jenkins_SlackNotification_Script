@@ -11,7 +11,7 @@ def start(){
 }
 
 def success(){
-   slackSend tteamDomain: "${env.TEAMDOMAIN}", channel: "${env.CHANNEL}", tokenCredentialId: "${env.TOKENCREDENTIALID}", color: '#00FF00', message: "*SUCCESS* after ${summery()}"
+   slackSend teamDomain: "${env.TEAMDOMAIN}", channel: "${env.CHANNEL}", tokenCredentialId: "${env.TOKENCREDENTIALID}", color: '#00FF00', message: "*SUCCESS* after ${summery()}"
 }
 
 def fail() {
