@@ -49,7 +49,9 @@
         
         throw err
         }
-
-        lib.success()
+        try{
+            lib.success()
+        }
+        
     } 
 
