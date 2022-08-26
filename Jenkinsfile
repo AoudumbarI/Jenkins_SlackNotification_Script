@@ -39,7 +39,7 @@
         stage('Deploy') {
             echo 'Deploy - Backend'
             echo 'Deploy - Frontend'
-            sh './jenkins/scripts/deliver.sh'
+            // sh './jenkins/scripts/deliver.sh'
         }
         lib.deploy()
         
