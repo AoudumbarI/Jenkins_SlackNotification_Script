@@ -7,7 +7,7 @@
             message: "*SUCCESS* after ${currentBuild.durationString.minus(' and counting')} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER} By ${currentBuild.getBuildCauses()[0].userId} "
   }
 def fail() {
-   slackSend teamDomain: "${env.TEAMDOMAIN}", channel: "${env.CHANNEL}", tokenCredentialId: "${env.TOKENCREDENTIALID}" color: '#FF0000', 
+   slackSend teamDomain: "${env.TEAMDOMAIN}", channel: "${env.CHANNEL}", tokenCredentialId: "${env.TOKENCREDENTIALID}", color: '#FF0000', 
               message: "*FAILURE* after ${currentBuild.durationString.minus(' and counting')} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER} By ${currentBuild.getBuildCauses()[0].userId} "
 }
 def testingfail() {
