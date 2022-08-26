@@ -1,9 +1,9 @@
 
- def MASSAGE = "*Deploy-SUCCESS* after ${currentBuild.durationString.minus(' and counting')} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER} By ${currentBuild.getBuildCauses()[0].userId} "
+ def summery = "*Deploy-SUCCESS* after ${currentBuild.durationString.minus(' and counting')} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER} By ${currentBuild.getBuildCauses()[0].userId} "
  
  def start(){
      slackSend teamDomain: "${env.TEAMDOMAIN}", channel: "${env.CHANNEL}", tokenCredentialId: "${env.TOKENCREDENTIALID}", color: '#439FE0', 
-            message: MASSAGE //"*STARTED* By ${currentBuild.getBuildCauses()[0].userId} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER}"
+            message: summery //"*STARTED* By ${currentBuild.getBuildCauses()[0].userId} <${env.BUILD_URL}/console | ${env.JOB_NAME}> - #${env.BUILD_NUMBER}"
   }
  def success(){
    slackSend tteamDomain: "${env.TEAMDOMAIN}", channel: "${env.CHANNEL}", tokenCredentialId: "${env.TOKENCREDENTIALID}", color: '#00FF00', 
