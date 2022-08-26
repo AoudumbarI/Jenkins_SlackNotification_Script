@@ -49,14 +49,10 @@
         
         throw err
         }
-        try{
+        stage('success') {
             lib.success()
-        }catch (err) {
-       
-        lib.fail()
-        
-        throw err
         }
+        
         
     } 
 
