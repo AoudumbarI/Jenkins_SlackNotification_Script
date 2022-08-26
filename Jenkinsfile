@@ -42,6 +42,7 @@
             // sh './jenkins/scripts/deliver.sh'
         }
         lib.deploy()
+        lib.success()
         
         }catch (err) {
        
@@ -49,10 +50,6 @@
         
         throw err
         }
-        stage('success') {
-            lib.success()
-        }
-        
         
     } 
 
